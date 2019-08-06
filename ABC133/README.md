@@ -10,6 +10,8 @@ func torT(N: Int, A: Int, B: Int) -> Int {
   return min(train, bus)   
 }
 
+print(torT(N: 4, A: 2, B: 9))
+
 ```
 
 ### B-Good Distance

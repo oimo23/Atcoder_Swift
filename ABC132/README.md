@@ -39,4 +39,7 @@ func ordinaryNumber(N: Int, P: [Int]) -> Int {
 
   return cnt
 }
+
+print(ordinaryNumber(N: 5, P: [1, 3, 5, 4, 2]))
+
 ```
