@@ -3,6 +3,16 @@
 
 ### A-Security
 ```Swift
+func stringToArray(str: String) -> [String] {
+  var array: [String] = []
+
+  for s in str {
+    array.append(String(s))
+  }
+  
+  return array
+}
+
 func security(S: String) -> String {
   let s: [String] = stringToArray(str: S)
 
