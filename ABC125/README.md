@@ -3,6 +3,11 @@
 
 ### A-Biscuit Generator
 ```Swift
+func biscuitGenerator(A: Int, B: Int, T: Int) -> Int {
+  return Int(floor(Double(T / A))) * B
+}
+
+print(biscuitGenerator(A: 3, B: 2, T: 9))
 
 ```
 
