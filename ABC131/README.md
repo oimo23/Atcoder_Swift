@@ -31,5 +31,34 @@ print(security(S: "8080"))
 
 ### B-Bite Eating
 ```Swift
+func biteEating(N: Int, L: Int) -> Int {
+  var list: [Int] = []
+
+  for i in 0..<N {
+    let taste: Int = (L + i + 1) - 1
+
+    list.append(taste)
+  }
+
+  let max: Int = list.reduce(0){(m,n) -> Int in m + n}
+  var min: Int = 10000000
+  var target: Int = 0
+
+  for i in 0..<N {
+    let temp: Int = max - list[i]
+    let absValue: Int  = abs(max - temp)
+
+    if absValue < min {
+      min = absValue
+      target = i
+    }
+  }
+
+  list.remove(at: target)
+
+  return list.reduce(0){(m,n) -> Int in m + n}
+}
+
+print(biteEating(N: 5, L: 2))
 
 ```

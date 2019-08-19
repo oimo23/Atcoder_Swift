@@ -21,5 +21,20 @@ print(ferrisWheel(A: 12, B: 100))
 
 ### B-Algae
 ```Swift
+func algae(r: Int, D: Int, X: Int) -> [Int] {
+  var answer: [Int] = []
+  var x: Int = X
+
+  for _ in 0..<10 {
+    let temp = (r * x) - D
+    answer.append(temp)
+
+    x = temp
+  }
+
+  return answer
+}
+
+print(algae(r: 2, D: 10, X: 20))
 
 ```

@@ -15,5 +15,21 @@ print(airplane(P:1, Q:3, R:4))
 
 ### B-Balance
 ```Swift
+func balance(N: Int, W: [Int]) -> Int {
+  var right: Int = W.reduce(0){(m,n) -> Int in m + n}
+  var left: Int  = 0
+  var answer: Int = right
+
+  for i in 0..<W.count {
+    left  += W[i]
+    right -= W[i]
+
+    answer = min(answer, abs(left - right))
+  }
+
+  return answer
+}
+
+print(balance(N: 4, W: [1, 3, 1, 1]))
 
 ```

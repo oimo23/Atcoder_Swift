@@ -24,5 +24,37 @@ print(changingCharacter(N: 3, K: 1, S: "ABC"))
 
 ### B-YYMM or MMYY
 ```Swift
+func yymmOrMmyy(S: String) -> String {
+  guard let first: Int = Int(String(S.prefix(2))) else { return "error"}
+  guard let last:  Int = Int(String(S.suffix(2))) else { return "error"}
+
+  // 両方1 ~ 12
+  if(
+    first > 0 && 12 >= first &&
+    last  > 0 && 12 >= last
+  ) {
+    return "AMBIGUOUS"
+  }
+
+  // YYMMのみ有りえる
+  if(
+    first <= 0 || 12 < first &&
+    last  >  0 && 12 >= last
+  ) {
+    return "YYMM"
+  }
+
+  // MMYYのみ有りえる
+  if(
+    first > 0 && 12 >= first &&
+    last  > 0 && 12 >= last
+  ) {
+    return "MMYY"
+  }
+
+  return "NA"
+}
+
+print(yymmOrMmyy(S: "1905"))
 
 ```
