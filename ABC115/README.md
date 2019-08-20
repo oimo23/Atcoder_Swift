@@ -28,6 +28,14 @@ print(christmasEveEveEve(D: 14))
 
 ### B-Christmas Eve Eve
 ```Swift
+func christmasEveEve(N: Int, P: [Int]) -> Int {
+  let top: Int = P.reduce(0){(m,n) -> Int in max(m, n)}
+  let sum: Int = P.reduce(0){(m,n) -> Int in m + n}
+
+  return sum - (top / 2)
+}
+
+print(christmasEveEve(N: 3, P: [4980, 7980, 6980]))
 
 ```
 
