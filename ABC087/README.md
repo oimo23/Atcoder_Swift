@@ -1,6 +1,16 @@
 ### ABC087
 [問題ページ](https://atcoder.jp/contests/abc087/tasks)
 
+### A-Buying Sweets
+```Swift
+func buyingSweets(X: Int, A: Int, B: Int) -> Int {
+  return (X - A) % B
+}
+
+print(buyingSweets(X: 1234, A: 150, B: 100))
+
+```
+
 ### B-Coins
 ```Swift
 func coins(A: Int, B: Int, C: Int, X: Int) -> Int {
